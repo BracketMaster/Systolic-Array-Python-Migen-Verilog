@@ -2,6 +2,8 @@
 
 Systolic array written in Python Migen that can be synthesized into verilog as shown below.
 Systolic arrays can be used to multiply matrices by making an array of MACs(multiply accumulate units) in hardware.
+
+Below is a picture of the default systolic provided in this repository. The ```ROWS``` and ```COLS``` can be set as a top level parameter in ```gen_systolic_array_rtl.py``` and ```testbench.py``` if necessary.
 ![](./doc.png)
 
 ```bash
