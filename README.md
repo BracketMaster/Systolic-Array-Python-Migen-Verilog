@@ -7,7 +7,7 @@ Below is a picture of the default systolic provided in this repository. The ```R
 ![](./doc.png)
 
 ```bash
-make rtl
+$user@local make rtl
 python3 gen_systolic_array_rtl.py
 Verilog written to _rtl_out/systolic_array.v
 ```
@@ -57,7 +57,7 @@ Feeds to simple matrices into the systolic array.
 The output is compared with the numpy.matmul() result.
 
 ```bash
-make test
+$user@local make test
 python3 testbench.py
 SYSTOLIC ARRAY OUTPUT:
 [[ 56.  62.  68.  74.]
