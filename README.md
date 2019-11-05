@@ -53,7 +53,7 @@ module top(
 [numpy]: https://numpy.org
 
 ## Testbench
-Feeds to simple matrices into the systolic array.
+Feeds two simple matrices into the systolic array.
 The output is compared with the numpy.matmul() result.
 
 ```bash
