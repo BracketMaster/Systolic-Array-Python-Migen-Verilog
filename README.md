@@ -1,4 +1,4 @@
-#Parameterizable  Systolic Array
+# Parameterizable  Systolic Array
 
 Systolic array written in Python Migen that can be synthesized into verilog as shown below.
 Systolic arrays can be used to multiply matrices by making an array of MACs(multiply accumulate units) in hardware.
