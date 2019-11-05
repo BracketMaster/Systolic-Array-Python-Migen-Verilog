@@ -76,7 +76,9 @@ Verilog written to _sim_out/systolic_array.vcd
 ```
 
 ## Operation
-To perform matrix multiplication A\*B, begin by placing the left most column of A at L_in and the top most row of B at Top_in. The next cycle, move once column to the right in A an place that at L_in. Also move one row down in B and place that at Top_in. Once you reach the last column of A or equivalently, the last row of B, insert 0s into Top_in and L_in so that the matrix product can perculate diagonally into the systolic array sums. Alternatively, you can begin another matrix multiplication, but not that you will never see the matrix product of the first matrix multiplication captured in a cycle. Instead, you will need a controller to diagonally scrape the sums of the systolic array cells.
+To perform matrix multiplication A\*B, begin by placing the left most column of A at L_in and the top most row of B at Top_in. The next cycle, move once column to the right in A an place that at L_in. Also move one row down in B and place that at Top_in. Once you reach the last column of A or equivalently, the last row of B, insert 0s into Top_in and L_in so that the matrix product can perculate diagonally into the systolic array sums. After a sufficient amount of cycles, the matrix product will reside in the ```SUM``` registers of the systolic array cells.
+
+Alternatively, you can begin another matrix multiplication, but note that the entire matrix product will never reside in the ```SUM``` registers of the systolic array cells. Instead, you will need a controller to diagonally scrape the sums of the systolic array cells while the products from the subsequent multiplication trickles in.
 
 ## TODO
  - [ ] make unit tests that take dimensions and arbitrary matrices as parameters
